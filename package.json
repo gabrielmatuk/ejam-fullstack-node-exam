@@ -1,14 +1,19 @@
 {
   "name": "ejam-exam",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "dev": "turbo run dev",
+    "lint": "turbo lint --",
+    "format": "turbo format",
+    "test": "turbo run test"
   },
   "devDependencies": {
-    "prettier": "^3.4.2",
+    "@biomejs/biome": "1.9.4",
     "turbo": "^2.3.4",
     "typescript": "5.7.3"
   },
