@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "3e379ff0-41e7-4a50-b5f9-e1aa7cd3760a",
+		"name": "Exam Ejam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create superhero",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "secret",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Batman\",\n    \"superpower\": \"rich\",\n    \"humilityScore\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/superheroes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"superheroes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List superheroes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "secret",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/superheroes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"superheroes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
