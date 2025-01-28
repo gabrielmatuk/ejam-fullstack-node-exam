@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "ejam-exam",
   "private": true,
   "scripts": {
     "build": "turbo build",
