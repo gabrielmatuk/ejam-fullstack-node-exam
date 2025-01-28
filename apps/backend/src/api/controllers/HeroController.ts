@@ -7,7 +7,7 @@ import { AuthGuard } from '@nestjs/passport';
 @ApiTags('superheroes')
 @Controller('superheroes')
 export class HeroController {
-  constructor(private readonly userService: HeroService) { }
+  constructor(private readonly heroService: HeroService) { }
 
   @Post()
   @UseGuards(AuthGuard('bearer'))
@@ -31,7 +31,7 @@ export class HeroController {
     @Body('superpower') superpower: string,
     @Body('humilityScore') humilityScore: number
   ) {
-    return this.userService.addSuperHero(name, superpower, humilityScore)
+    return this.heroService.addSuperHero(name, superpower, humilityScore)
   }
 
   @Get()
@@ -41,6 +41,6 @@ export class HeroController {
   @ApiResponse({ status: 200, description: 'Return all superheroes.' })
   @ApiResponse({ status: 401, description: 'Unauthorized.' })
   public getSuperHeroes() {
-    return this.userService.getSuperHeroes()
+    return this.heroService.getSuperHeroes()
   }
 }
