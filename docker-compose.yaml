@@ -7,3 +7,5 @@ services:
       dockerfile: ./apps/backend/Dockerfile
     ports:
       - '3000:3000'
+    env_file:
+      - ./apps/backend/.env
