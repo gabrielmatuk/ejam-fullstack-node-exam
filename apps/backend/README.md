@@ -55,6 +55,7 @@ docker compose up --build -d
 - Implement a better logging system
 - Implement more endpoints to manage the superheroes
 - Implement a database to store the superheroes
+- Enable CORS only for the frontend application
 
 ## Observations
 
